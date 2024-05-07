@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones Regulares</title>
+</head>
+<body>
+    <h2>Expresiones Regulares</h2>
+    <p>123456789</p>
+    <p>123-123-123</p>
+
+    <h3>Expresión regular:</h3>
+    <pre>/^\d{9}$/</pre>
+    <pre>/^\d{3}-\d{3}-\d{3}$/</pre>
+
+    <h3>Estructura:</h3>
+    <ul>
+        <li>9 números consecutivos</li>
+        <li>IM</li>
+    </ul>
+
+    <p>123 123456</p>
+    <h3>Expresión regular:</h3>
+    <pre>/^\d{3}\s\d{6}$/</pre>
+
+    <p>123 12 12 12</p>
+    <h3>Expresión regular:</h3>
+    <pre>/^\d{3}\s\d{2}\s\d{2}\s\d{2}$/</pre>
+    
+    <p>Isb otemnot Iob ) (((noisy)Jasz.12[5-</p>
+    <p>(123) 123456</p>
+    <h3>Expresión regular:</h3>
+    <pre>/^\(\d{3}\)\s\d{6}$/</pre>
+    
+    <p>+12 123456789</p>
+    <h3>Expresión regular:</h3>
+    <pre>/^\+\d{2,3}\s\d{9}$/</pre>
+</body>
+</html>

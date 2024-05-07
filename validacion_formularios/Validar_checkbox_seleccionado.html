@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Checkbox</title>
+</head>
+<body>
+    <script>
+        var chckboxes = document.getElementsByName("grupo-checkbox");
+        var chcked = false;
+
+        for (var i = 0; i < chckboxes.length; i++) {
+            if (chckboxes[i].checked) {
+                chcked = true;
+                break;
+            }
+        }
+
+        if (!chcked) {
+            return false;
+        }
+    </script>
+
+    <form>
+        <input type="checkbox" name="grupo-checkbox" value="1"> Opción 1<br>
+        <input type="checkbox" name="grupo-checkbox" value="2"> Opción 2<br>
+        <input type="checkbox" name="grupo-checkbox" value="3"> Opción 3<br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

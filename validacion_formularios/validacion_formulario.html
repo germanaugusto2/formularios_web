@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="" id="" name="" onsubmit="return validacion()"> 
+        <!-- Aquí van los campos del formulario -->
+    </form> 
+
+    <script> 
+        function validacion() { 
+            // Validación del primer campo
+            if (condición_del_primer_campo) { 
+                // Si no cumple la condición, mostrar alerta de error y detener el envío del formulario
+                alert("[ERROR] El primer campo es incorrecto por...");
+                return false; 
+            } 
+            
+            // Validación del segundo campo
+            if (condición_del_segundo_campo) { 
+                // Si no cumple la condición, mostrar alerta de error y detener el envío del formulario
+                alert("[ERROR] El segundo campo es incorrecto por...");
+                return false; 
+            } 
+
+            // Si no se ha producido ningún error, permitir el envío del formulario
+            return true; 
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Número de DNI</title>
+</head>
+<body>
+    <script>
+        function validarDNI(dni) {
+            var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+            
+            // Comprobación del formato del número
+            if (!(/^\d{8}[A-Z]$/.test(dni))) {
+                return false;
+            }
+
+            // Comprobación de la letra
+            if (dni.charAt(8) !== letras[(dni.substring(0, 8)) % 23]) {
+                return false;
+            }
+
+            return true;
+        }
+
+        // Ejemplo de uso
+        var dniValido = validarDNI("12345678Z");
+        console.log(dniValido); // true
+
+        var dniInvalido = validarDNI("12345678A");
+        console.log(dniInvalido); // false
+    </script>
+</body>
+</html>
+
+
